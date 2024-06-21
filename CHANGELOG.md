@@ -5,6 +5,119 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v2024.06.03]
+### Added
+- Active mass and comments are read and returned as a logging messages.
+- More regression tests.
+- Additional hardware ranges.
+- Aux voltage is now read from nda files.
+
+### Fixed
+- Correct voltage, current, capacity scalings for ndax files with ndc version 14 data.
+- Handling of timestamps now matches Neware. Dates are read as UTC and then converted to local time zone.
+
+### Changed
+- Warning now use logging.warning() instead of warnings.warn().
+
+
+## [v2024.05.01]
+### Added
+- Unsupported nda versions now raise exceptions.
+
+### Fixed
+- More robust support for nda version 130
+
+
+## [v2024.04.01]
+### Added
+- Github workflow with regression testing and code coverage.
+- Hardware range settings.
+
+### Fixed
+- Issue #50 related to missing Aux data.
+
+
+## [v2024.03.01]
+### Added
+- Additional range setting added.
+
+### Fixed
+- Resolved FutureWarnings for pandas 3.0
+
+
+## [v2024.02.01]
+### Added
+- Expanded ndax aux channel support (ndc version 11).
+- 'extras_require' added to setup.py for testing.
+
+
+## [v2024.01.02]
+### Added
+- Support for nda files from BTS9.
+- New 'cycle_mode' keyword argument to specify how cycle number should be generated.
+- Additional current ranges.
+
+### Fixed
+- Bug fixes for ndax support.
+
+
+## [v2023.12.01]
+### Added
+- Support for ndax from BTS Server 8.
+- Additional ndax verison information now returned as logging.
+
+### Changed
+- 'software_cycle_number=True' is now the default for ndax.
+
+
+## [v2023.11.01]
+### Added
+- Ability to read auxiliary data from ndax files.
+- pytest regression tests for code development.
+
+### Fixed
+- Support for constant power charge and discharge.
+- Additional current ranges.
+
+### Changed
+- 'software_cycle_number=True' is one again the default behavior for nda.
+
+
+## [v2023.10.02]
+### Added
+- Support for constant power charge and discharge.
+- Additional current ranges.
+
+
+## [v2023.07.03]
+### Added
+- Support for reading ndax.
+
+
+## [v2023.06.01]
+### Added
+- Missing current range.
+- Performance improvements
+
+### Changed
+- The cycle number is now read directly from the nda file for compatibility with the newest version of BTSDA. Previous numbering can be restored with the new 'software_cycle_number' flag.
+
+
+## [v2023.05.01]
+### Fixed
+- Issue #20, files failing to load.
+- Updates to README.
+
+
+## [v2023.04.14]
+### Added
+- Significant performance improvement.
+- PEP8 code formatting consistency.
+
+### Fixed
+- Issue #22 that occasionally resulted in incorrect temperature values.
+
+
 ## [v2023.02.01]
 ### Added
 - Support for additional current ranges and states
